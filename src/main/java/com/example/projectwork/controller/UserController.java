@@ -25,7 +25,7 @@ public class UserController {
         userRepository.save(user);
         return ResponseEntity.ok("User registered successfully");
     }
-
+/*
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody Map<String, String> payload) {
         String email = payload.get("email");
@@ -37,5 +37,20 @@ public class UserController {
         } else {
             return ResponseEntity.status(401).body("Invalid email or password");
         }
+    }*/
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody Map<String, String> payload) {
+        String email = payload.get("email");
+        String password = payload.get("password");
+
+        Optional<User> user = userRepository.findByEmailAndPassword(email, password);
+
+        if (user.isPresent()) {
+            // Return user details (id, name, email, role) so frontend can use them
+            return ResponseEntity.ok(user.get());
+        } else {
+            return ResponseEntity.status(401).body("Invalid email or password");
+        }
     }
+
 }

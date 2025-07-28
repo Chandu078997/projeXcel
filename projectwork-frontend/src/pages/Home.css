@@ -1,5 +1,5 @@
 /* Page container - centers everything */
-.page-container {
+.page-container1 {
   min-height: 100vh;
   background: linear-gradient(to bottom, #f0f4ff, #dce6f5);
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 /* Title styling */
-.page-container h2 {
+.page-container1 h2 {
   font-size: 32px;
   color: #1976d2;
   margin-bottom: 30px;
@@ -18,7 +18,7 @@
 }
 
 /* Make the domain list a grid */
-.page-container ul {
+.page-container1 ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -30,7 +30,7 @@
 }
 
 /* Each domain as a card */
-.page-container ul li {
+.page-container1 ul li {
   background: #ffffff;
   border-radius: 12px;
   padding: 25px;

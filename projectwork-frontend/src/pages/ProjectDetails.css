@@ -12,7 +12,7 @@
 .project-details-page h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #1976d2;
+  color: #0c0a08;
 }
 
 .project-details-page p {
@@ -24,7 +24,7 @@
 .submission-box {
   margin-top: 20px;
   text-align: center;
-  width: 100%;
+  width: 50%;
 }
 
 .submission-box input {
@@ -34,6 +34,7 @@
   margin-right: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+ 
 }
 
 .submission-box button {
