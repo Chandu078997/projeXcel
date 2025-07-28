@@ -1,17 +1,17 @@
-# Use an official Java 17 runtime (lightweight)
+# Use a lightweight Java 17 image
 FROM eclipse-temurin:17-jdk-alpine
 
-# Set working directory in container
+# Set working directory
 WORKDIR /app
 
-# Copy project files
+# Copy the project into container
 COPY . .
 
-# Build the application (skip tests to save time)
+# Build the app (skip tests for faster builds)
 RUN ./mvnw clean package -DskipTests
 
-# Expose the port Spring Boot will run on
+# Expose the port (Render injects $PORT dynamically)
 EXPOSE 8080
 
-# Run the Spring Boot application
-CMD ["java", "-jar", "target/*.jar"]
+# Run the exact built JAR
+CMD ["java", "-jar", "target/projectwork-0.0.1-SNAPSHOT.jar"]
