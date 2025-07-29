@@ -1,4 +1,5 @@
 package com.example.projectwork.config;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -13,10 +14,11 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5174",
-                                        "https://projexecelfrontend.netlify.app" 
-                                        "https://projexcel-production.up.railway.app"// Your deployed frontend
-                                     )
+                        .allowedOrigins(
+                                "http://localhost:5174",
+                                "https://projexecelfrontend.netlify.app",
+                                "https://projexcel-production.up.railway.app" // Your deployed frontend
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
