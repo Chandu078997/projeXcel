@@ -16,7 +16,7 @@ public class WebConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://localhost:5174",
-                                "https://projexecelfrontend.netlify.app",
+                                 "https://projetxecelfrontend.netlify.app",
                                 "https://projexcel-production.up.railway.app" ,
                             "https://projexcel-1.onrender.com"// Your deployed frontend
                         )
