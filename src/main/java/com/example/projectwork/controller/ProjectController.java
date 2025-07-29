@@ -70,7 +70,8 @@ public class ProjectController {
     
 
 }
-*/package com.example.projectwork.controller;
+*/
+package com.example.projectwork.controller;
 
 import com.example.projectwork.entity.Project;
 import com.example.projectwork.entity.Submission;
@@ -88,8 +89,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/projects")
 @CrossOrigin(origins ={ "http://localhost:5174", "https://projexecelfrontend.netlify.app",       // Your deployed frontend
-    "https://projexcel-production.up.railway.app","https://projexcel-1.onrender.com"}
-            )
+    "https://projexcel-production.up.railway.app","https://projexcel-1.onrender.com"})
 public class ProjectController {
 
     private final ProjectService projectService;
