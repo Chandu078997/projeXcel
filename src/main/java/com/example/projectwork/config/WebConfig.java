@@ -17,7 +17,8 @@ public class WebConfig {
                         .allowedOrigins(
                                 "http://localhost:5174",
                                 "https://projexecelfrontend.netlify.app",
-                                "https://projexcel-production.up.railway.app" // Your deployed frontend
+                                "https://projexcel-production.up.railway.app" ,
+                            "https://projexcel-1.onrender.com"// Your deployed frontend
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
