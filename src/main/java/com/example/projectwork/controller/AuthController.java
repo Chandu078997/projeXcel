@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
 @CrossOrigin(origins = {"http://localhost:5174",
-             "https://projexecelfrontend.netlify.app",       // Your deployed frontend
+            "https://projetxecelfrontend.netlify.app",       // Your deployed frontend
     "https://projexcel-production.up.railway.app",
                        "https://projexcel-1.onrender.com"}
             )
