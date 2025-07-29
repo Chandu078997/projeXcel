@@ -31,7 +31,8 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of("http://localhost:5174",
                                                  "https://projexecelfrontend.netlify.app",       // Your deployed frontend
-
+"https://projexcel-production.up.railway.app"
+                                                
                                                )); // Frontend URL
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
