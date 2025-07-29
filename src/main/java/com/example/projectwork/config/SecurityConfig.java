@@ -31,7 +31,7 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
             "http://localhost:5174",
-            "https://projexecelfrontend.netlify.app",
+             "https://projetxecelfrontend.netlify.app",
             "https://projexcel-production.up.railway.app",
             "https://projexcel-1.onrender.com"
         ));
