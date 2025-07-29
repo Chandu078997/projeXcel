@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/domains")  // Matches frontend API call
 @CrossOrigin(origins = "http://localhost:5174", "https://projexecelfrontend.netlify.app",       // Your deployed frontend
-    "https://projexcel-production-5f4e.up.railway.app")  // Vite dev server port
+    "https://projexcel-production.up.railway.app")  // Vite dev server port
 public class DomainController {
 
     private final DomainRepository domainRepository;
