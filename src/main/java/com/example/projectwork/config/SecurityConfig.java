@@ -20,7 +20,7 @@ public class SecurityConfig {
             .cors().configurationSource(corsConfigurationSource())
             .and()
             .authorizeHttpRequests()
-                .requestMatchers("/projectwork/api/users/**").permitAll()
+                .requestMatchers("/api/users/**").permitAll()
                 .anyRequest().permitAll();
 
         return http.build();
