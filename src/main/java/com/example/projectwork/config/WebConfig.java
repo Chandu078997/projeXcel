@@ -14,7 +14,8 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:5174",
-                                        "https://projexecelfrontend.netlify.app"      // Your deployed frontend
+                                        "https://projexecelfrontend.netlify.app" 
+                                        "https://projexcel-production.up.railway.app"// Your deployed frontend
                                      )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
