@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @CrossOrigin(origins = {"http://localhost:5174",
              "https://projexecelfrontend.netlify.app",       // Your deployed frontend
-    "https://projexcel-production.up.railway.app"}
+    "https://projexcel-production.up.railway.app",
+                       "https://projexcel-1.onrender.com"}
             )
 public class AuthController {
 
