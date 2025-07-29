@@ -1,17 +1,17 @@
-# Use a lightweight Java 17 image
-FROM eclipse-temurin:17-jdk-alpine
-
-# Set working directory
+# ---------- Build Stage ----------
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
-
-# Copy the project into container
 COPY . .
-
-# Build the app (skip tests for faster builds)
 RUN ./mvnw clean package -DskipTests
 
-# Expose the port (Render injects $PORT dynamically)
-EXPOSE 8080
+# ---------- Runtime Stage ----------
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+COPY --from=build /app/target/projectwork-0.0.1-SNAPSHOT.jar app.jar
 
-# Run the exact built JAR
-CMD ["java", "-jar", "target/projectwork-0.0.1-SNAPSHOT.jar"]
+# Use Render's dynamic PORT
+EXPOSE 8080
+ENV PORT=8080
+
+# Force Spring Boot to use Render's $PORT and no extra context path
+ENTRYPOINT ["java", "-jar", "/app/app.jar", "--server.port=${PORT}", "--server.servlet.context-path=/"]
