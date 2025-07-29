@@ -88,7 +88,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/projects")
-@CrossOrigin(origins ={ "http://localhost:5174", "https://projexecelfrontend.netlify.app",       // Your deployed frontend
+@CrossOrigin(origins ={ "http://localhost:5174", "https://projexecelfrontend.netlify.app", 
+                        "https://projetxecelfrontend.netlify.app",// Your deployed frontend
     "https://projexcel-production.up.railway.app","https://projexcel-1.onrender.com"})
 public class ProjectController {
 
